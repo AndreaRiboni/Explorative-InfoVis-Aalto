@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <!-- Resources -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/addons/p5.sound.min.js"></script>
+    <!-- Version 3 of p5play -->
+    <script src="https://p5play.org/v3/p5play.js"></script>
+    <script src="https://p5play.org/v3/planck.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles/explorative_style.css">
+    <!-- Responsive -->
+    <meta charset="utf-8" />
+    <title>Explorative Information Visualization</title>
+    <!-- Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Montserrat:ital,wght@0,500;0,800;1,200&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Map chart code -->
+    <script src="scripts/interactive_map.js"></script>
+
+    <div class="container">
+      <div class="row h-75">
+        <div class="col gradient-bg">
+          <!-- Map chart container -->
+          <div id="chartdiv"></div>
+          <!-- Glass container -->
+          <div id="canvas" style="display: flex; justify-content: center; align-items: center; opacity: 0"></div>
+          <!-- Hacky way to pass the counter -->
+          <span id="value" hidden></span>
+        </div>
+        <div class="col montserrat">
+          <div class="container my-5 pb-0">
+            <div class="header">
+              <h1 class="heavy-font">| Beyond the Plate</h1>
+            </div>
+            <div class="content">
+              <p>How many times have you taken your food for granted?<br>
+                 Your food is not free and your job pays for it: <b>time is the currency now</b>.</p>
+              <p>This map illustrates the average amount of work time needed in each country to afford a daily healthy diet. For clarity in highlighting the disparities, I have employed a logarithmic scale.</p>
+              <p>Understanding is perceiving: select a country to observe the time needed to fill a metaphorical glass. Once filled, it represents the point at which people in that country can afford their healthy diet.</p>
+              <p>See how much it differs from country to country.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Glass and water script -->
+    <script src="scripts/glass.js"></script>
+  </body>
+</html>
