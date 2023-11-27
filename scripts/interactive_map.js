@@ -53,9 +53,11 @@ am5.ready(function() {
         var countryName = dataItem.dataContext.name;
         var countryValue = dataItem.dataContext.value;
 
-        console.log("Country: " + countryName + ", Value: " + countryValue);
-        document.getElementById("value").innerHTML = countryValue;
-        document.getElementById('value').click();
+        if (countryValue){
+            console.log("Country: " + countryName + ", Value: " + countryValue);
+            document.getElementById("value").innerHTML = countryValue;
+            document.getElementById('value').click();
+        }
     }
 
       // Add click event listener to the map polygons
